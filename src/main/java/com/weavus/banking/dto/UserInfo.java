@@ -1,13 +1,20 @@
 package com.weavus.banking.dto;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
-import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
+import lombok.ToString;
+import org.hibernate.annotations.DynamicInsert;
 
 @Entity
-@Data
+@Getter
+@Setter
+@ToString
 @Table(name = "userinfo")
+@DynamicInsert
 public class UserInfo {
 
     @Id

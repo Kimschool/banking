@@ -1,16 +1,21 @@
 package com.weavus.banking.dto;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
-import lombok.Data;
+import jakarta.persistence.*;
+import lombok.Getter;
+import lombok.Setter;
+import lombok.ToString;
 
 @Entity
-@Data
+@Setter
+@Getter
+@ToString
 @Table(name = "transinfo")
 public class TransInfo {
 
+    // リファクタリング
     @Id
+    // insert시 1씩 증가하게 하는 어노테이션
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int no;
     private String userId;
 }
