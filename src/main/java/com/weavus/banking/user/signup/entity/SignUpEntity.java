@@ -1,4 +1,4 @@
-package com.weavus.banking.signup.entity;
+package com.weavus.banking.user.signup.entity;
 
 import lombok.Getter;
 import lombok.Setter;

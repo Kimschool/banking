@@ -1,4 +1,4 @@
-package com.weavus.banking.login.service;
+package com.weavus.banking.user.login.service;
 
 import com.weavus.banking.dao.UserInfoDao;
 import com.weavus.banking.dto.UserInfo;

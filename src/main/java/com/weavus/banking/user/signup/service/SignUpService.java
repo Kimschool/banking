@@ -1,8 +1,8 @@
-package com.weavus.banking.signup.service;
+package com.weavus.banking.user.signup.service;
 
 import com.weavus.banking.dao.UserInfoDao;
 import com.weavus.banking.dto.UserInfo;
-import com.weavus.banking.signup.entity.SignUpEntity;
+import com.weavus.banking.user.signup.entity.SignUpEntity;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 

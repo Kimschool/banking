@@ -1,21 +1,26 @@
-package com.weavus.banking.signup.controller;
+package com.weavus.banking.user.signup.controller;
 
-import com.weavus.banking.signup.entity.SignUpEntity;
-import com.weavus.banking.signup.service.SignUpService;
+import com.weavus.banking.user.signup.entity.SignUpEntity;
+import com.weavus.banking.user.signup.service.SignUpService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.SessionAttribute;
 
 @Controller
 @RequiredArgsConstructor
+@RequestMapping("/user")
 public class SignUpController {
 
     private final SignUpService signUpService;
 
     @GetMapping("/signUp")
-    public String signUp() {
+    public String signUp(@SessionAttribute(name = "id") String id) {
+
+        System.out.println(id);
 
         return "signup";
 
