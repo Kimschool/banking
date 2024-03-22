@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-//@RequestMapping("/user")
+@RequestMapping("/user")
 public class LoginController {
 
     @Autowired
@@ -45,8 +45,7 @@ public class LoginController {
             HttpSession session = req.getSession();
             session.setAttribute("id", userInfo.getId());
 
-            model.addAttribute("name", userInfo.getName());
-            return "main";
+            return "redirect:/account/";
         }
     }
 

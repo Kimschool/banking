@@ -6,13 +6,16 @@
 </head>
 <body>
 
-<span th:text="${name}"></span><span>님 환영합니다.</span> <button onclick="location.href='user/modify'">수정하기</button>
+<span th:text="${id}"></span><span>님 환영합니다.</span> <button onclick="location.href='user/modify'">수정하기</button>
 
-<h3>신주쿠 지점(001)</h3>
-<h3>계좌번호 : 4112</h3>
-<h4>잔고 : <a href="#">123,456,789엔</a></h4>
-<button>계좌 이체</button>
-<a href="/account/history">거래내역</a>
+<div th:each="account : ${accountList}">
+    <h3><span th:text="${account.branchName}"></span>지점(<span th:text="${account.brandCode}"></span>)</h3>
+    <h3>계좌번호 : <span th:text="${account.account}"></span></h3>
+    <h4>잔고 : <a href="#"><span th:text="${account.amount}"></span>엔</a></h4>
+    <button>계좌 이체</button>
+    <a href="/account/history">거래내역</a>
+</div>
+
 
 </body>
 </html>
